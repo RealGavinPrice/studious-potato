@@ -173,7 +173,7 @@ background-position-y: 15%;
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
     main {
-        transition: 1s ease-in-out;
+        transition: .25s ease-in-out;
         flex-direction: column;
         margin-top: 75%;}
     .label {
@@ -189,6 +189,7 @@ background-position-y: 15%;
     }
     main {
         display: grid;
+        transition: .25s ease-in-out;
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
     }
