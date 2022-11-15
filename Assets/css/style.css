@@ -10,6 +10,8 @@
     --sectionwidth: auto;
     --bordertype: 1px solid whitesmoke;
     --firstransition: .5s ease;
+    --secondtransition: 3s ease-in-out;
+    --radius1: 2%;
 }
    header {
     position: absolute;
@@ -20,14 +22,20 @@
     color: rgb(255, 255, 255);
     text-align: center;
     background-color: var(--color5);
+    border-bottom-left-radius: var(--radius1);
+    border-bottom-right-radius: var(--radius1);
    }
 
    header h1 {
-    padding-top: 1.5em;
+    padding-top: 1em;
+    padding-bottom: .27em;
     font-size: 400%;
     backface-visibility: hidden;
    }
 
+   .profilepiccontainer {
+    display: flex;
+   }
    .HiddenPic {
 height: 10em;   
 display: flex;
@@ -36,6 +44,8 @@ justify-content: center;
 flex: 1 0 30; 
 width: 100%;
 background-image: url(/Users/emily/Downloads/CU-VIRT-FSF-PT-10-2022-U-LOLC-main/02-Advanced-CSS/02-Challenge/Assets/images/profilepic.jpg);
+background-size: 100%;
+border-radius: var(--radius1);
 background-repeat: no-repeat;   
 background-position-y: 15%;
 
@@ -49,7 +59,7 @@ background-position-y: 15%;
    .background-image {
     position: fixed;
     z-index: -1;
-    padding: 100vh;
+    padding: 60vh;
     background-image: url("/Users/emily/Downloads/CU-VIRT-FSF-PT-10-2022-U-LOLC-main/02-Advanced-CSS/02-Challenge/Assets/images/aus2.jpg");
     background-size: cover;
     width: 100vh;
@@ -98,7 +108,7 @@ background-position-y: 15%;
 
 
     main {
-    margin-top: 42%;
+    margin-top: 33%;
     display: flex;
     vertical-align: center;
 }
@@ -118,6 +128,8 @@ background-position-y: 15%;
         display: flex;
 \       flex-wrap: wrap;
         padding: 5%;
+        height: 100px;
+        width: 100px;
         box-shadow: 0px 0px 10px var(--color4) inset;
         border: 0 solid black;
         border-radius: 50%;
@@ -126,7 +138,7 @@ background-position-y: 15%;
   section {
     border: 2px dashed gray;
     border-radius: 10px;
-    padding: 1em;
+    padding: .25em;
     width: var(--sectionwidth);
    }
 
@@ -136,6 +148,7 @@ background-position-y: 15%;
 
    footer{
     position: fixed;
+    display: flex;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -172,13 +185,20 @@ background-position-y: 15%;
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
-    main {
-        transition: .25s ease-in-out;
-        flex-direction: column;
-        margin-top: 75%;}
-    .label {
-        padding-top: 100%;
+    header {
         width: 100%;
+    }
+    nav {
+        width: 100%;
+    }
+    .HiddenPic {
+        width: 100%;
+    }
+    main {
+        transition: var(--secondtransition);
+        padding-top: 50%;}
+    .label {
+        border-radius: 50%;
     }
 }
 
@@ -188,10 +208,18 @@ background-position-y: 15%;
         width: 100%;
     }
     main {
+        transition: var(--secondtransition);
         display: grid;
-        transition: .25s ease-in-out;
+        flex-wrap: wrap;
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
+    }
+    .label {
+        margin-top: 45%;
+        flex: .5 1;
+        height: 100px;
+        width: 100px;
+    }
     }
 
 }
@@ -200,6 +228,11 @@ background-position-y: 15%;
 @media only screen and (max-width: 992px) {
     body {
         width: 100%;
+    }
+    main {
+        transition: var(--secondtransition);
+        grid-template-columns: repeat(3, 1fr);
+
     }
 }
 
