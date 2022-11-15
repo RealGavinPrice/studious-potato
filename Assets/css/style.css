@@ -2,15 +2,15 @@
     --color1: rgba(255, 213, 129, 0.802);
     --color2:  rgb(252, 217, 104);
     --color3:  rgb(255, 186, 47);
-    --color4:  rgba(84, 42, 162, 0.479);
+    --color4:  rgba(84, 42, 162, 0.55);
     --color5:  rgb(0, 0, 0);
     --color6: rgba(40, 30, 30, 0.728);
     --buttoncolor: rgba(84, 42, 162, 0.775);
     --boxwidth: auto;
     --sectionwidth: auto;
     --bordertype: 1px solid whitesmoke;
-    --firstransition: .5s ease;
-    --secondtransition: 3s ease-in-out;
+    --firstransition: 1s ease;
+    --secondtransition: 2s ease-in-out;
     --radius1: 2%;
 }
    header {
@@ -37,17 +37,17 @@
     display: flex;
    }
    .HiddenPic {
-height: 10em;   
-display: flex;
-display: block;
-justify-content: center;
-flex: 1 0 30; 
-width: 100%;
-background-image: url(/Users/emily/Downloads/CU-VIRT-FSF-PT-10-2022-U-LOLC-main/02-Advanced-CSS/02-Challenge/Assets/images/profilepic.jpg);
-background-size: 100%;
-border-radius: var(--radius1);
-background-repeat: no-repeat;   
-background-position-y: 15%;
+    height: 10em;   
+    display: flex;
+    display: block;
+    justify-content: center;
+    flex: 1 0 30; 
+    width: 100%;
+    background-image: url(/Users/emily/Downloads/CU-VIRT-FSF-PT-10-2022-U-LOLC-main/02-Advanced-CSS/02-Challenge/Assets/images/profilepic.jpg);
+    background-size: 100%;
+    border-radius: var(--radius1);
+    background-repeat: no-repeat;   
+    background-position-y: 15%;
 
 }
 
@@ -110,7 +110,9 @@ background-position-y: 15%;
     main {
     margin-top: 33%;
     display: flex;
-    vertical-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
     aside {
@@ -125,14 +127,14 @@ background-position-y: 15%;
 
 
     .label {
-        display: flex;
-\       flex-wrap: wrap;
-        padding: 5%;
-        height: 100px;
-        width: 100px;
-        box-shadow: 0px 0px 10px var(--color4) inset;
-        border: 0 solid black;
-        border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0px 0px 10px var(--color4) inset;
+    border: 0 solid black;
+    border-radius: 50%;
 }
 
   section {
@@ -148,7 +150,6 @@ background-position-y: 15%;
 
    footer{
     position: fixed;
-    display: flex;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -199,6 +200,8 @@ background-position-y: 15%;
         padding-top: 50%;}
     .label {
         border-radius: 50%;
+        margin: auto;
+        margin-top: 28%;
     }
 }
 
@@ -209,16 +212,14 @@ background-position-y: 15%;
     }
     main {
         transition: var(--secondtransition);
-        display: grid;
+        display: block;
         flex-wrap: wrap;
         width: 100%;
-        grid-template-columns: repeat(2, 1fr);
     }
     .label {
-        margin-top: 45%;
         flex: .5 1;
-        height: 100px;
-        width: 100px;
+        height: 25vh;
+        width: 25vh;
     }
     }
 
@@ -231,10 +232,9 @@ background-position-y: 15%;
     }
     main {
         transition: var(--secondtransition);
-        grid-template-columns: repeat(3, 1fr);
-
+        width: 100%;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
+@media only screen and (min-width: 1200px) {}
