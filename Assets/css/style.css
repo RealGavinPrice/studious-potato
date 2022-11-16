@@ -43,7 +43,7 @@
     justify-content: center;
     flex: 1 0 30; 
     width: 100%;
-    background-image: url("/Users/emily/Downloads/CU-VIRT-FSF-PT-10-2022-U-LOLC-main/02-Advanced-CSS/02-Challenge/Assets/images/profilepic.jpg");
+    background-image: url("../images/")
     background-size: 100%;
     opacity: .3;
     border-radius: var(--radius1);
