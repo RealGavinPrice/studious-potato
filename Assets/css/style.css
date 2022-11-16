@@ -5,11 +5,11 @@
     --color4:  rgba(84, 42, 162, 0.55);
     --color5:  rgb(0, 0, 0);
     --color6: rgba(40, 30, 30, 0.728);
-    --buttoncolor: rgba(84, 42, 162, 0.775);
+    --buttoncolor: rgb(84, 42, 162);
     --boxwidth: auto;
     --sectionwidth: auto;
     --bordertype: 1px solid whitesmoke;
-    --firstransition: 1s ease;
+    --firstransition: 4s ease;
     --secondtransition: 2s ease-in-out;
     --radius1: 2%;
 }
@@ -116,7 +116,9 @@
     margin-top: 50vh;
     display: grid;
     justify-content: center;
-    height: 175vh;
+    height: 175%;
+    border: 2px dashed gray;
+    border-radius: 2%;
 }
 
     .label {
@@ -129,7 +131,8 @@
     border-radius: 50%;
     z-index: 2;
 }
-
+h2 {
+text-align: center;}
 
   section {
     border: 2px dashed gray;
@@ -152,9 +155,9 @@ iframe {
 iframe:hover {
     transition: 5s;
     opacity: 100%;
-    width: 45vh;
-    height: 45vh;
-    margin-left: -40%;
+    width: 50vh;
+    height: 50vh;
+    margin-left: -20vh;
 }
 
 
@@ -171,14 +174,15 @@ iframe:hover {
 
 
 .label:hover {
+    font-size: 129%;
   background-color: var(--color4);
   color: #fff;
   transition: var(--firstransition);
 }
 
 .label:active {
-  font-size: 110%;
-  box-shadow: 0 0 10px rgb(120, 3, 255) inset;
+  font-size: 142%;
+  box-shadow: 0 0 10px rgb(150, 3, 255) inset;
   background-color: var(--buttoncolor);
   transition: var(--firstransition);
 }
@@ -233,6 +237,7 @@ iframe:hover {
         width: 100%;
         margin-top: 28vh;
     }
+
     .label {
         flex: .5 1;
         height: 25vh;
