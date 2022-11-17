@@ -156,11 +156,14 @@
     height: 50vh;
     margin-left: -20vh;
 }
-    .Ghosttype a{
+    .Ghosttype {
     background-image: url(a3774195088_16.jpeg); 
+    background-size: 100%;
+    background-repeat: no-repeat;
     opacity: .3; 
     border-radius: 50%;
-    height: 100%;  
+    height: 100%; 
+    width: 100%; 
     z-index: 2;            
 }
 .Ghosttype:hover{
@@ -200,8 +203,6 @@
 
 
 
-
-
 @media only screen and (min-width: 600px) {
     header {
         width: 100%;
@@ -212,6 +213,11 @@
 
     .HiddenPic {
         width: 100%;
+    }
+
+    .HiddenPic:active {
+        opacity: 1;
+        transition: 0.5s;
     }
     main {
         transition: var(--secondtransition);
