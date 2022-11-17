@@ -9,13 +9,12 @@
     --boxwidth: auto;
     --sectionwidth: auto;
     --bordertype: 1px solid whitesmoke;
-    --firstransition: 4s ease;
+    --firstransition: 1s ease;
     --secondtransition: 2s ease-in-out;
     --radius1: 2%;
 }
    header {
     position: absolute;
-    display: flex;
     display: block;
     left: 0;
     width: 100%;
@@ -30,7 +29,6 @@
     padding-top: 1em;
     padding-bottom: .27em;
     font-size: 400%;
-    backface-visibility: hidden;
    }
 
    .profilepiccontainer {
@@ -52,9 +50,9 @@
 
 }
 
-.HiddenPic:hover {
+    .HiddenPic:hover {
     opacity: 1;
-    transition: 2s ease-in-out;
+    transition: var(--secondtransition);
 }
 
     a {
@@ -114,7 +112,6 @@
 
     main {
     margin-top: 50vh;
-    display: grid;
     justify-content: center;
     height: 175%;
     border: 2px dashed gray;
@@ -123,7 +120,7 @@
 
     .label {
     margin: auto;
-    padding: 5%;
+    padding: 50%;
     height: 100px;
     width: 100px;
     box-shadow: 0px 0px 10px var(--color4) inset;
@@ -131,10 +128,10 @@
     border-radius: 50%;
     z-index: 2;
 }
-h2 {
-text-align: center;}
+    h2 {
+    text-align: center;}
 
-  section {
+    section {
     border: 2px dashed gray;
     border-radius: 10px;
     padding: .25em;
@@ -146,20 +143,30 @@ text-align: center;}
     padding-block: 1px;
 }
 
-iframe {
+    iframe {
     border-radius: 50%;
     opacity: 35%;
     width: 20vh;
     height: 20vh
 }
-iframe:hover {
+    iframe:hover {
     transition: 5s;
     opacity: 100%;
     width: 50vh;
     height: 50vh;
     margin-left: -20vh;
 }
-
+    .Ghosttype a{
+    background-image: url(a3774195088_16.jpeg); 
+    opacity: .3; 
+    border-radius: 50%;
+    height: 100%;  
+    z-index: 2;            
+}
+.Ghosttype:hover{
+    transition: 5s ease;
+    opacity: 1;
+}
 
    footer{
     position: fixed;
@@ -173,23 +180,16 @@ iframe:hover {
 }
 
 
-.label:hover {
-    font-size: 129%;
-  background-color: var(--color4);
-  color: #fff;
-  transition: var(--firstransition);
+    .label:hover {
+    font-size: 142%;
+    box-shadow: 0 0 10px rgb(150, 3, 255) inset;
+    background-color: var(--buttoncolor);
+    transition: var(--firstransition);
 }
 
-.label:active {
-  font-size: 142%;
-  box-shadow: 0 0 10px rgb(150, 3, 255) inset;
-  background-color: var(--buttoncolor);
-  transition: var(--firstransition);
-}
-
-.label:focus {
-  outline: none;
-  border-color: #8ac4ff;
+    .label:focus {
+    outline: none;
+    border-color: #8ac4ff;
 }
 
 
@@ -209,17 +209,14 @@ iframe:hover {
     nav {
         width: 100%;
     }
+
     .HiddenPic {
         width: 100%;
     }
     main {
         transition: var(--secondtransition);
     }
-        .label {
-        border-radius: 50%;
-        margin: auto;
-        margin-top: 28%;
-    }
+     
     footer {
         transition: var(--secondtransition);
         font-size: x-small;
