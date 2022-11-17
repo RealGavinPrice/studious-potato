@@ -159,7 +159,6 @@
     .Ghosttype {
     background-image: url(a3774195088_16.jpeg); 
     background-size: 100%;
-    background-repeat: no-repeat;
     opacity: .3; 
     border-radius: 50%;
     height: 100%; 
@@ -203,7 +202,7 @@
 
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
     header {
         width: 100%;
     }
@@ -218,6 +217,13 @@
     .HiddenPic:active {
         opacity: 1;
         transition: 0.5s;
+    }
+
+    .label:active{
+        font-size: 142%;
+        box-shadow: 0 0 10px rgb(150, 3, 255) inset;
+        background-color: var(--buttoncolor);
+        transition: var(--firstransition);
     }
     main {
         transition: var(--secondtransition);
