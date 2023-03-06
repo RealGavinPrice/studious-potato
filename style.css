@@ -165,6 +165,21 @@
     width: 100%; 
     z-index: 2;            
 }
+
+.Shareabyte{
+    background-image: url(share-a-byte_logo.png); 
+    background-size: 100%;
+    opacity: .3; 
+    border-radius: 50%;
+    height: 100%; 
+    width: 100%; 
+    z-index: 2;            
+}
+
+.Shareabyte:hover{
+    transition: 5s ease;
+    opacity: 1;
+}
 .Ghosttype:hover{
     transition: 5s ease;
     opacity: 1;
